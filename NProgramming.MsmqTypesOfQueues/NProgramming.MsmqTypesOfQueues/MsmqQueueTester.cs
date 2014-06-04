@@ -50,7 +50,7 @@ namespace NProgramming.MsmqTypesOfQueues
                 queue.Send("Message: " + i);
             }
             transaction.Commit();
-            Console.WriteLine(TransactionalQueuePath + ": " + stopwatch.ElapsedMilliseconds + " ms.");
+            Console.WriteLine(TransactionalQueuePath + " (batched): " + stopwatch.ElapsedMilliseconds + " ms.");
         }
 
         private static void Process(MessageQueue queue, string queueName)
